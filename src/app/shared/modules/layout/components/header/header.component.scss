@@ -1,1 +1,178 @@
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/_variables.scss';
 
+header {
+  height: 100vh;
+  background-image: url('/assets/img/banner.png');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  .navbar__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 0px;
+
+    @media only screen and (max-width: get-breakpoint(sm)) {
+      align-items: center;
+      padding: 28px 0px;
+    }
+
+    @media only screen and (max-width: get-breakpoint(xs)) {
+      padding: 24px 0px;
+    }
+
+    &-item {
+      .logo {
+        display: flex;
+        max-width: 25px;
+        width: 100%;
+        gap: 10px;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        span {
+          display: flex;
+          min-width: 150px;
+          font-weight: 400;
+          line-height: 21px;
+        }
+
+        @media only screen and (max-width: get-breakpoint(sm)) {
+          span {
+            font-size: 11px;
+          }
+        }
+
+        @media only screen and (max-width: get-breakpoint(xs)) {
+          align-items: center;
+          gap: 5px;
+
+          img {
+            max-height: 25px;
+          }
+
+          span {
+            min-width: 110px;
+            font-size: 8px;
+            line-height: 12px;
+          }
+        }
+      }
+
+      .button {
+        background: inherit;
+        color: var(--bs-black);
+        padding: 15px 30px;
+
+        &:hover {
+          scale: 0.9;
+          background: hsl(36, 97%, 73%);
+          color: var(--bs-black);
+        }
+
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: -2%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          &:hover {
+            scale: initial;
+            background: inherit;
+            color: var(--bs-black);
+          }
+        }
+
+        @media only screen and (max-width: get-breakpoint(sm)) {
+          padding: 3px 23px;
+
+          img {
+            width: 11px;
+            height: 15px;
+          }
+
+          span {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  .banner {
+    &__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      h1 {
+        display: flex;
+        min-width: 769px;
+        margin-bottom: 45px;
+        text-align: center;
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 67px;
+
+        @media only screen and (max-width: get-breakpoint(tb)) {
+          font-size: 45px;
+        }
+
+        @media only screen and (max-width: get-breakpoint(sm)) {
+          margin-bottom: 40px;
+          min-width: 480px;
+          font-size: 35px;
+          line-height: 36px;
+        }
+
+        @media screen and (max-width: get-breakpoint(xs)) {
+          min-width: 320px;
+          font-size: 30px;
+        }
+      }
+
+      .button {
+        margin: 0 auto;
+        background: var(--bs-black);
+        color: var(--bs-white);
+        padding: 16px 32px;
+
+        &:hover {
+          scale: 0.9;
+          background: hsl(36, 97%, 73%);
+          color: var(--bs-black);
+        }
+
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          &:hover {
+            scale: initial;
+            background: var(--bs-black);
+            color: var(--bs-white);
+          }
+        }
+
+        @media only screen and (max-width: get-breakpoint(sm)) {
+          padding: 12px 32px;
+          span {
+            font-size: 13px;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+  }
+}
