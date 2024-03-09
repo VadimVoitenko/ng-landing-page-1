@@ -1,0 +1,13 @@
+<div class="modal">
+  <div class="video-container">
+    <div class="modal-btn">
+      <button type="button" class="btn btn-secondary">
+        <mat-icon class="custom-icon" (click)="activeModal.dismiss()">close</mat-icon>
+      </button>
+    </div>
+    <video #videoPlayer autoplay="true" [muted]="isMuted" controls>
+      <source src="assets/video/fullHDnew3.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>

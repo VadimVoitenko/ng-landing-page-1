@@ -1,0 +1,105 @@
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/_variables.scss';
+
+section {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/presentation.png');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  @media only screen and (max-width: get-breakpoint(md)) {
+    height: 600px;
+  }
+
+  @media only screen and (max-width: get-breakpoint(sm)) {
+    height: 350px;
+  }
+
+  @media only screen and (max-width: get-breakpoint(xs)) {
+    height: 180px;
+  }
+
+  .media__content {
+    padding-top: 87px;
+
+    @media only screen and (max-width: get-breakpoint(tb)) {
+      padding-top: 50px;
+    }
+
+    @media only screen and (max-width: get-breakpoint(sm)) {
+      padding-top: 20px;
+      line-height: 27px;
+    }
+
+    // @media only screen and (max-width: 568px) {
+    //   padding-top: 0;
+    // }
+
+    &-title {
+      margin-bottom: 30px;
+      color: var(--bs-white);
+      font-size: 56px;
+      font-weight: 400;
+      //   line-height: 67px;
+
+      @media only screen and (max-width: get-breakpoint(md)) {
+        font-size: 45px;
+      }
+
+      @media only screen and (max-width: get-breakpoint(tb)) {
+        font-size: 38px;
+      }
+
+      @media only screen and (max-width: get-breakpoint(sm)) {
+        font-size: 25px;
+        margin-bottom: 0;
+      }
+      @media only screen and (max-width: get-breakpoint(xs)) {
+        font-size: 19.5px;
+        height: 12px;
+      }
+    }
+
+    &-info {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 29px;
+      color: var(--bs-white);
+
+      @media only screen and (max-width: get-breakpoint(md)) {
+        font-size: 20px;
+      }
+
+      @media only screen and (max-width: get-breakpoint(xs)) {
+        font-size: 10px;
+      }
+    }
+
+    .button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: none;
+      text-decoration: none;
+      display: inline-block;
+      background: url('/assets/img/icons/btn-play-big.svg') no-repeat center;
+      height: 121px;
+      width: 116px;
+      border-radius: 10px;
+      background-size: cover;
+      padding: 0;
+      transition: transform 0.27s ease-in-out;
+
+      @media only screen and (max-width: get-breakpoint(xs)) {
+        height: 58px;
+        width: 60px;
+      }
+
+      @media only screen and (max-width: get-breakpoint(sm)) {
+        height: 49px;
+        width: 49px;
+      }
+    }
+  }
+}
