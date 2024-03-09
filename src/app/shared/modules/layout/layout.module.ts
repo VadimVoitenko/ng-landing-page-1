@@ -8,10 +8,11 @@ import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
 import { CoreModule } from 'src/app/core/core.module'
+import { ScheduleCardComponent } from './components/schedule-card/schedule-card.component'
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [HeaderComponent, FooterComponent, ScheduleCardComponent],
   imports: [CommonModule, TranslocoModule, CoreModule, RouterModule],
-  exports: [HeaderComponent, FooterComponent],
+  exports: [HeaderComponent, FooterComponent, ScheduleCardComponent],
 })
 export class LayoutModule {}

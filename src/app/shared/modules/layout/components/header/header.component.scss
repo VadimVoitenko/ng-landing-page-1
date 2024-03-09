@@ -28,7 +28,7 @@ nav {
         display: flex;
         max-width: 25px;
         width: 100%;
-        gap: 10px;
+        gap: 9px;
 
         &:hover {
           cursor: pointer;
@@ -37,6 +37,7 @@ nav {
         span {
           display: flex;
           min-width: 150px;
+          font-size: 14px;
           font-weight: 400;
           line-height: 21px;
         }

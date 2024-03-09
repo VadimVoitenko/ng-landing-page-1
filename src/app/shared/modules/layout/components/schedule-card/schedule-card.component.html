@@ -1,0 +1,5 @@
+<div class="card">
+  <span class="card-id"> <ng-container *ngIf="item.id >= 1 && item.id <= 9">0</ng-container>{{ item.id }}</span>
+  <strong class="card-title">{{ item.title }}</strong>
+  <p class="card-description" *ngFor="let descriptItem of item.description">{{ descriptItem }}</p>
+</div>
