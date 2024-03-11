@@ -1,0 +1,156 @@
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/_variables.scss';
+
+footer {
+  padding: 50px 0 37px 0;
+  background: var(--bs-black);
+
+  @media only screen and (max-width: get-breakpoint(xs)) {
+    padding: 63px 0 26px 0;
+  }
+}
+
+.footer {
+  &__content {
+    &-main {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2px;
+
+      @media only screen and (max-width: get-breakpoint(xs)) {
+        flex-direction: column-reverse;
+        gap: 15px;
+      }
+
+      .title {
+        margin-left: 0px;
+
+        .logo {
+          display: flex;
+          max-width: 25px;
+          width: 100%;
+          gap: 9px;
+          color: var(--bs-white);
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          span {
+            display: flex;
+            min-width: 150px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+          }
+
+          @media only screen and (max-width: get-breakpoint(sm)) {
+            span {
+              font-size: 11px;
+            }
+          }
+
+          @media only screen and (max-width: get-breakpoint(xs)) {
+            margin-bottom: 26px;
+            align-items: center;
+            gap: 9px;
+
+            span {
+              font-size: 14px;
+              line-height: 19px;
+            }
+          }
+        }
+      }
+
+      .social {
+        &__list {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 14px;
+          gap: 15px;
+
+          &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            border: 2px solid var(--bs-white);
+            border-radius: 10px;
+
+            a {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              svg path {
+                transition: all 0.25s ease-in-out;
+                &:hover {
+                  scale: 0.9;
+                  fill: #ffcd4e;
+                  transition: all 0.25s ease-in-out;
+                }
+              }
+            }
+
+            .custom-img {
+              margin-bottom: 2px;
+              margin-left: 2px;
+            }
+          }
+        }
+
+        &__links {
+          text-align: right;
+
+          &-item {
+            margin-bottom: 5px;
+            a {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 21px;
+              color: var(--bs-white);
+              text-decoration: underline;
+              transition: all 0.25s ease-in-out;
+
+              &:hover {
+                color: #4b8bfa;
+              }
+            }
+          }
+        }
+
+        @media only screen and (max-width: get-breakpoint(xs)) {
+          margin-bottom: 10px;
+          &__list {
+            margin-bottom: 45px;
+          }
+          &__links {
+            display: flex;
+            flex-direction: column-reverse;
+            text-align: left;
+
+            &-item {
+              margin-bottom: 18px;
+            }
+          }
+        }
+      }
+    }
+    &-copyright {
+      span {
+        display: block;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        color: var(--bs-white);
+        opacity: 50%;
+
+        @media only screen and (max-width: get-breakpoint(xs)) {
+          font-size: 10px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+}
