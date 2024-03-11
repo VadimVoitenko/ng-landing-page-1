@@ -1,0 +1,15 @@
+<div class="modal">
+  <div class="modal__content">
+    <div class="modal__content-btn-escape">
+      <button type="button" class="btn">
+        <mat-icon (click)="activeModal.dismiss()">close</mat-icon>
+      </button>
+    </div>
+    <p class="modal__content-title">Дякуємо</p>
+    <div class="modal__content-text">
+      <span>Ми відправили лист на вашу пошту.</span>
+      <span>Будь ласка, підтвердіть підписку.</span>
+    </div>
+    <button class="button modal__content-btn-submit" (click)="activeModal.dismiss()">OK</button>
+  </div>
+</div>

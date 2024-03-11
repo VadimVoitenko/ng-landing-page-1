@@ -1,0 +1,158 @@
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/_variables.scss';
+
+section {
+  background: #ffcd4e;
+  .newsletter {
+    &__content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 114px 0 150px 0;
+      padding-right: 60px;
+      gap: 15px;
+
+      @media only screen and (max-width: get-breakpoint(tb)) {
+        padding: 90px 0 100px 0;
+      }
+
+      @media only screen and (max-width: get-breakpoint(sm)) {
+        padding: 75px 0 80px 0;
+      }
+
+      @media only screen and (max-width: get-breakpoint(xs)) {
+        flex-direction: column;
+        padding: 54px 0 59px 0;
+        gap: 50px;
+      }
+
+      &-info {
+        h4 {
+          max-width: 360px;
+          font-size: 56px;
+          font-weight: 400;
+          line-height: 67.2px;
+          letter-spacing: -1px;
+        }
+        span {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 28px;
+        }
+
+        @media only screen and (max-width: get-breakpoint(tb)) {
+          h4 {
+            font-size: 47px;
+            line-height: 47px;
+          }
+          span {
+            font-size: 16px;
+          }
+        }
+
+        @media only screen and (max-width: get-breakpoint(sm)) {
+          h4 {
+            font-size: 36px;
+            line-height: 40px;
+          }
+          span {
+            font-size: 16px;
+          }
+        }
+
+        @media only screen and (max-width: get-breakpoint(xs)) {
+          h4 {
+            font-size: 26px;
+            line-height: 30px;
+            max-width: 140px;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+          }
+          span {
+            font-size: 14px;
+            letter-spacing: -0.25px;
+          }
+        }
+      }
+
+      &-subscribe {
+        display: flex;
+        flex-direction: column;
+        width: 294px;
+        margin-top: 5px;
+
+        input {
+          padding: 0;
+          background: #ffcd4e;
+          border-top: none;
+          border-right: none;
+          border-left: none;
+          border-bottom: 2px solid var(--bs-black);
+          &::placeholder {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 21.6px;
+            background: #ffcd4e;
+          }
+          &:focus {
+            background-color: inherit;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            color: var(--bs-black);
+          }
+        }
+
+        @media only screen and (max-width: get-breakpoint(xs)) {
+          input::placeholder {
+            font-size: 16px;
+          }
+        }
+
+        .button {
+          display: block;
+          margin-top: 30px;
+          margin-left: 1px;
+          background: var(--bs-black);
+          color: var(--bs-white);
+          padding: 18px 36px;
+          font-size: 16px;
+          font-weight: 400;
+
+          &:hover {
+            scale: 0.9;
+            background: inherit;
+            color: var(--bs-black);
+          }
+
+          @media only screen and (max-width: 1024px) {
+            &:hover {
+              scale: initial;
+              background: inherit;
+              color: var(--bs-black);
+            }
+          }
+
+          @media only screen and (max-width: get-breakpoint(xs)) {
+            padding: 15px 0px;
+            margin-top: 40px;
+            max-width: 185px;
+            font-size: 14px;
+          }
+        }
+
+        span {
+          max-width: 256px;
+          margin-top: 21px;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+
+          @media only screen and (max-width: get-breakpoint(xs)) {
+            margin-top: 10px;
+            font-size: 10px;
+            line-height: 15px;
+          }
+        }
+      }
+    }
+  }
+}

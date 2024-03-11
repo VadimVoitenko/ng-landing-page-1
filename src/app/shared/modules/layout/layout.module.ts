@@ -10,10 +10,11 @@ import { MatIconModule } from '@angular/material/icon'
 
 import { CoreModule } from 'src/app/core/core.module'
 import { ScheduleCardComponent } from './components/schedule-card/schedule-card.component'
-import { VideoModalComponent } from './components/video-modal/video-modal.component'
+import { VideoModalComponent } from './components/video-modal/video-modal.component';
+import { SubscribeModalComponent } from './components/subscribe-modal/subscribe-modal.component'
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, ScheduleCardComponent, VideoModalComponent],
+  declarations: [HeaderComponent, FooterComponent, ScheduleCardComponent, VideoModalComponent, SubscribeModalComponent],
   imports: [CommonModule, TranslocoModule, CoreModule, RouterModule, MatIconModule],
   exports: [HeaderComponent, FooterComponent, ScheduleCardComponent],
 })

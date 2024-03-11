@@ -1,0 +1,15 @@
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter__content">
+      <div class="newsletter__content-info">
+        <h4>Щотижневі новини</h4>
+        <span>Підпишіться, щоб отримувати листи</span>
+      </div>
+      <form class="newsletter__content-subscribe" [formGroup]="emailForm" (ngSubmit)="sendEmail()">
+        <input type="email" placeholder="Ваш email" formControlName="email" required />
+        <button type="submit" class="button" (click)="openModal()">Підписатись</button>
+        <span>Даю згоду на обробку та використання персональних даних</span>
+      </form>
+    </div>
+  </div>
+</section>
