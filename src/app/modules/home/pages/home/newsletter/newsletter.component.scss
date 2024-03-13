@@ -152,6 +152,13 @@ section {
             line-height: 15px;
           }
         }
+
+        .hint {
+          margin: 5px;
+          margin-bottom: 0px;
+          font-size: 14px;
+          color: var(--bs-red);
+        }
       }
     }
   }

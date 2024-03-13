@@ -1,16 +1,15 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
-import { Observable } from 'rxjs'
 
 @Injectable({
   providedIn: 'root',
 })
 export class EmailService {
-  // private apiUrl = 'https://api.example.com/send-email'
+  private apiUrl = 'https://rm-united24-rebuild-api-public.demo.ukrohost.com/appeal/create'
 
-  // constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
-  // sendEmail(emailData: any): Observable<any> {
-  //   return this.http.post(this.apiUrl, emailData)
-  // }
+  sendEmail(email: string) {
+    this.http.post(this.apiUrl, email)
+  }
 }

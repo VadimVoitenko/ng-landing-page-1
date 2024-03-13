@@ -5,9 +5,16 @@
         <h4>Щотижневі новини</h4>
         <span>Підпишіться, щоб отримувати листи</span>
       </div>
-      <form class="newsletter__content-subscribe" [formGroup]="emailForm" (ngSubmit)="sendEmail()">
-        <input type="email" placeholder="Ваш email" formControlName="email" required />
-        <button type="submit" class="button" (click)="openModal()">Підписатись</button>
+      <form class="newsletter__content-subscribe" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+        <input type="email" placeholder="Ваш email" formControlName="email" />
+
+        <p class="hint" *ngIf="emailForm.get('email')?.errors?.required && emailForm.get('email')?.dirty">Email is empty!</p>
+
+        <p class="hint" *ngIf="emailForm.get('email')?.errors?.email && (emailForm.get('email')?.dirty || emailForm.get('email')?.touched)">
+          Please enter a valid email address!
+        </p>
+
+        <button type="submit" class="button" [disabled]="!emailForm.valid || isSubmitting">Підписатись</button>
         <span>Даю згоду на обробку та використання персональних даних</span>
       </form>
     </div>
