@@ -6,8 +6,10 @@ import { Component } from '@angular/core'
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  // @ViewChild(HomeHeroComponent) homeHeroComponent!: HomeHeroComponent
-  // scrollToHomeHeroComponent() {
-  //   this.homeHeroComponent.target.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
-  // }
+  scrollToMedia() {
+    const mediaComponent = document.getElementById('media')
+    if (mediaComponent) {
+      mediaComponent.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }
 }
